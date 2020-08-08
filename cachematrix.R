@@ -1,3 +1,4 @@
+#Create a list of functions for a matrix
 makeCacheMatrix <- function(x = matrix()) {
   inv<-NULL
   set<- function(y){
@@ -13,7 +14,7 @@ makeCacheMatrix <- function(x = matrix()) {
   getinverse<-function()inv
   list(set=set,get=get,setinverse=setinverse,getinverse=getinverse)
 }
-
+#return Cached inverse of a matrix
 cacheSolve <- function(y, ...) {
   x<-makeCacheMatrix(y)
   inv<- x$getinverse()
